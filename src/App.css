@@ -1,38 +1,91 @@
-.App {
+body {
+  background-color: #17181f;
+  color: #aaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+form {
+  border: 1px solid #30313d;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+form input[type="text"] {
+  background: none;
+  border: 0;
+  color: #fff;
+  padding: 0 8px;
+  display: block;
+  width: 100%;
+}
+
+form button {
+  background-color: #61dafb;
+  border: 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.task {
+  background-color: #30313d;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s linear;
+}
+
+.task svg {
+  height: 20px;
+  margin-right: 6px;
+  fill: #61dafb;
+}
+
+.task.done {
+  opacity: 0.3;
+  text-decoration: line-through;
+  transition: width 0.1s linear;
+}
+
+h1,
+h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.checkbox {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task-name,
+.task form {
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.trash {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+.trash svg {
+  fill: #888;
+  height: 14px;
+}
+
+.task input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
 }
